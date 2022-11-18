@@ -1,4 +1,4 @@
-# frontend
+# proton-app
 
 ## Build Setup
 
