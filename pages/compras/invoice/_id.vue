@@ -104,7 +104,7 @@ export default {
       },
       apiUrl: "compras",
       page: "Compras",
-      modulo: "Invoice",
+      modulo: "Facturas",
       marcas:[],
       medidas:[],
       categorias:[],
