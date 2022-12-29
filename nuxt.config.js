@@ -29,6 +29,10 @@ export default {
       { src: "/assets/js/plugins/dragula/dragula.min.js" },
       { src: "/assets/js/plugins/jkanban/jkanban.js" },
       { src: "/assets/js/plugins/chartjs.min.js" },
+      { src: "/assets/js/plugins/choices.min.js" },
+      { src: "/assets/js/plugins/fullcalendar.min.js" },
+      { src: "/assets/js/plugins/tilt.min.js" },
+      { src: "/assets/js/soft-ui-dashboard.min.js" },
     ]
   },
 
