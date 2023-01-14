@@ -1,9 +1,9 @@
 <template>
- <AdminTemplate>
+  <AdminTemplate>
     <div slot="body">
-      {{user}}
+      {{ user }}
     </div>
- </AdminTemplate>
+  </AdminTemplate>
 </template>
 
 <script>
@@ -14,13 +14,13 @@ export default {
       title: "Index",
     };
   },
-  data(){
+  data() {
     return {
-      user:{}
+      user: {}
     }
   },
-  mounted(){
-    this.$nextTick(()=>{
+  mounted() {
+    this.$nextTick(() => {
       let user = localStorage.getItem('userAuth')
       this.user = JSON.parse(user)
     })

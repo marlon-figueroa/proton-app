@@ -10,61 +10,27 @@
                 <h3>Configurar</h3>
               </div>
               <div class="card-body">
-                <CrudUpdate
-                  v-if="list.length > 0"
-                  :model="model"
-                  :apiUrl="apiUrl"
-                >
+                <CrudUpdate v-if="list.length > 0" :model="model" :apiUrl="apiUrl">
                   <div slot="body" class="row">
                     <div class="form-group col-12">
                       <label for="">Nombre</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.nombre"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.nombre" class="form-control" id="" />
                     </div>
                     <div class="form-group col-12">
                       <label for="">Direccion</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.direccion"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.direccion" class="form-control" id="" />
                     </div>
                     <div class="form-group col-12">
                       <label for="">Telefono</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.telefono"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.telefono" class="form-control" id="" />
                     </div>
                     <div class="form-group col-12">
                       <label for="">Impresora</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.impresora"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.impresora" class="form-control" id="" />
                     </div>
                     <div class="form-group col-12">
                       <label for="">Impresora URL</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.impresora_url"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.impresora_url" class="form-control" id="" />
                     </div>
                   </div>
                 </CrudUpdate>
@@ -72,57 +38,28 @@
                   <div slot="body" class="row">
                     <div class="form-group col-12">
                       <label for="">Nombre</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.nombre"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.nombre" class="form-control" id="" />
                     </div>
                     <div class="form-group col-12">
                       <label for="">Direccion</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.direccion"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.direccion" class="form-control" id="" />
                     </div>
                     <div class="form-group col-12">
                       <label for="">Telefono</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.telefono"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.telefono" class="form-control" id="" />
                     </div>
                     <div class="form-group col-12">
                       <label for="">Impresora</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.impresora"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.impresora" class="form-control" id="" />
                     </div>
                     <div class="form-group col-12">
                       <label for="">Impresora URL</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.impresora_url"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.impresora_url" class="form-control" id="" />
                     </div>
                   </div>
                 </CrudCreate>
-                <button  v-if="list.length > 0" @click="ImprimirTest()" class="btn btn btn-dark w-100">Imprimir pagina de prueba</button>
+                <button v-if="list.length > 0" @click="ImprimirTest()" class="btn btn btn-dark w-100">Imprimir pagina de
+                  prueba</button>
               </div>
             </div>
           </div>
@@ -162,9 +99,9 @@ export default {
       const res = await this.$api.$get(path);
       return res;
     },
-    async ImprimirTest(){
+    async ImprimirTest() {
       let sucursal = this.model
-      const res = await this.$printer.$post(sucursal.impresora_url+"test",sucursal);
+      const res = await this.$printer.$post(sucursal.impresora_url + "test", sucursal);
       console.log(res)
     }
   },

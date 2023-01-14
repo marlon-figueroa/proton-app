@@ -24,24 +24,13 @@
                       <td class="py-0 px-1">{{ m.total }}</td>
                       <td class="py-0 px-1">
                         <div class="btn-group">
-                          <nuxtLink
-                            :to="url_editar + m.id"
-                            class="btn btn-info btn-sm py-1 px-2"
-                          >
+                          <nuxtLink :to="url_editar + m.id" class="btn btn-info btn-sm py-1 px-2">
                             <i class="fas fa-eye"></i>
                           </nuxtLink>
-                          <button
-                            type="button"
-                            @click="ImprimirVenta(m)"
-                            class="btn btn-success btn-sm py-1 px-2"
-                          >
+                          <button type="button" @click="ImprimirVenta(m)" class="btn btn-success btn-sm py-1 px-2">
                             <i class="fas fa-print"></i>
                           </button>
-                          <button
-                            type="button"
-                            @click="Eliminar(m.id)"
-                            class="btn btn-danger btn-sm py-1 px-2"
-                          >
+                          <button type="button" @click="Eliminar(m.id)" class="btn btn-danger btn-sm py-1 px-2">
                             <i class="fas fa-trash"></i>
                           </button>
                         </div>
@@ -74,7 +63,7 @@ export default {
       apiUrl: "ventas",
       page: "Ventas",
       modulo: "Lista de ventas",
-      sucursal:{
+      sucursal: {
 
       },
       url_editar: "/ventas/invoice/",
@@ -116,17 +105,17 @@ export default {
           }
         });
     },
-    async ImprimirVenta(venta){
+    async ImprimirVenta(venta) {
       let sucursal = this.sucursal
       sucursal.venta = venta
-      const res = await this.$printer.$post(sucursal.impresora_url+"venta",sucursal);
+      const res = await this.$printer.$post(sucursal.impresora_url + "venta", sucursal);
       console.log(res)
     }
   },
   mounted() {
     this.$nextTick(async () => {
       try {
-        await Promise.all([this.GET_DATA(this.apiUrl),this.GET_DATA('sucursals'),]).then((v) => {
+        await Promise.all([this.GET_DATA(this.apiUrl), this.GET_DATA('sucursals'),]).then((v) => {
           this.list = v[0];
           this.sucursals = v[1];
           if (this.sucursals.length > 0) {

@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <AdminTemplate  :page="page" :modulo="modulo">
+    <AdminTemplate :page="page" :modulo="modulo">
       <div slot="body">
         <div class="row justify-content-center">
           <div class="col-sm-8 col-12">
@@ -13,46 +13,21 @@
                 <CrudCreate :model="model" :apiUrl="apiUrl">
                   <div slot="body" class="row">
                     <div class="form-group col-12">
-              <label for="">Nombre</label>
-              <input
-                type="text"
-                name=""
-                v-model="model.nombre"
-                class="form-control"
-                id=""
-              />
-            </div>
+                      <label for="">Nombre</label>
+                      <input type="text" name="" v-model="model.nombre" class="form-control" id="" />
+                    </div>
                     <div class="form-group col-12">
-              <label for="">Username</label>
-              <input
-                type="text"
-                name=""
-                v-model="model.username"
-                class="form-control"
-                id=""
-              />
-            </div>
+                      <label for="">Username</label>
+                      <input type="text" name="" v-model="model.username" class="form-control" id="" />
+                    </div>
                     <div class="form-group col-12">
-              <label for="">Email</label>
-              <input
-                type="text"
-                name=""
-                v-model="model.email"
-                class="form-control"
-                id=""
-              />
-            </div>
+                      <label for="">Email</label>
+                      <input type="text" name="" v-model="model.email" class="form-control" id="" />
+                    </div>
                     <div class="form-group col-12">
-              <label for="">Password</label>
-              <input
-                type="password"
-                name=""
-                v-model="model.password"
-                class="form-control"
-                id=""
-              />
-            </div>
-
+                      <label for="">Password</label>
+                      <input type="password" name="" v-model="model.password" class="form-control" id="" />
+                    </div>
                   </div>
                 </CrudCreate>
               </div>
@@ -69,20 +44,20 @@ export default {
   name: "IndexPage",
   head() {
     return {
-      title:this.modulo,
+      title: this.modulo,
     };
   },
   data() {
     return {
       model: {
         nombre: "",
-        username:'',
-        email:'',
-        password:'',
+        username: '',
+        email: '',
+        password: '',
       },
-      apiUrl:'users',
-      page:'Usuarios',
-      modulo:'Usuario'
+      apiUrl: 'users',
+      page: 'Usuarios',
+      modulo: 'Usuario'
     };
   },
   methods: {

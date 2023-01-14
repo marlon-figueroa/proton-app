@@ -4,7 +4,6 @@
     <AdminTemplate :page="page" :modulo="modulo">
       <div slot="body">
         <div class="row justify-content-end">
-
           <div class="col-12">
             <div class="card">
               <div class="card-body">
@@ -29,23 +28,18 @@
                       <td class="py-0 px-1">{{ m.marca.nombre }}</td>
                       <td class="py-0 px-1">{{ m.categoria.nombre }}</td>
                       <td class="py-0 px-1">
-                        <span class="badge " :class="[m.stock<=m.stock_minimo?'badge-danger':'badge-success']"
-                      > {{m.stock}} {{m.medida.codigo}}
-                      </span
-                    >
+                        <span class="badge " :class="[m.stock <= m.stock_minimo ? 'badge-danger' : 'badge-success']">
+                          {{ m.stock }} {{ m.medida.codigo }}
+                        </span>
                       </td>
                       <td class="py-0 px-1">{{ Number(m.inversion).toFixed(2) }}</td>
                       <td class="py-0 px-1">{{ Number(m.valorizado).toFixed(2) }}</td>
                       <td class="py-0 px-1">{{ Number(m.ganancia).toFixed(2) }}</td>
                       <td class="py-0 px-1">
                         <div class="btn-group">
-                          <nuxtLink
-                            :to="url_editar + m.id"
-                            class="btn btn-info btn-sm py-1 px-2"
-                          >
+                          <nuxtLink :to="url_editar + m.id" class="btn btn-info btn-sm py-1 px-2">
                             <i class="fas fa-eye"></i>
                           </nuxtLink>
-
                         </div>
                       </td>
                     </tr>
@@ -59,7 +53,6 @@
     </AdminTemplate>
   </div>
 </template>
-
 <script>
 export default {
   head() {
@@ -67,7 +60,6 @@ export default {
       title: this.modulo,
     };
   },
-
   data() {
     return {
       load: true,

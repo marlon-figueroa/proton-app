@@ -14,13 +14,7 @@
                   <div slot="body" class="row">
                     <div class="form-group col-12">
                       <label for="">Nombre</label>
-                      <input
-                        type="text"
-                        name=""
-                        v-model="model.nombre"
-                        class="form-control"
-                        id=""
-                      />
+                      <input type="text" name="" v-model="model.nombre" class="form-control" id="" />
                     </div>
                   </div>
                 </CrudUpdate>

@@ -2,28 +2,28 @@
   <div>
     <JcLoader :load="load"></JcLoader>
 
-      <div class="row">
-        <div class="col-12">
-          <slot name="body">
+    <div class="row">
+      <div class="col-12">
+        <slot name="body">
 
-          </slot>
-        </div>
-        <div class="col-12">
-          <div class="row">
-            <div class="col-6">
-          <button class="btn btn-info w-100" @click="$router.back()">
-            Regresar
-          </button>
-        </div>
-        <div class="col-6">
-          <button class="btn btn-dark w-100" @click="Save()">
-            Guardar
-          </button>
-        </div>
+        </slot>
+      </div>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-6">
+            <button class="btn btn-info w-100" @click="$router.back()">
+              Regresar
+            </button>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-dark w-100" @click="Save()">
+              Guardar
+            </button>
           </div>
         </div>
-
       </div>
+
+    </div>
 
   </div>
 </template>
@@ -31,14 +31,14 @@
 <script>
 export default {
 
-  props:{
-    model:{
-      type:Object,
-      default:()=>{}
+  props: {
+    model: {
+      type: Object,
+      default: () => { }
     },
-    apiUrl:{
-      type:String,
-      default:''
+    apiUrl: {
+      type: String,
+      default: ''
     }
 
   },

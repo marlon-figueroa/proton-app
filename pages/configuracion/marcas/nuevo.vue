@@ -1,7 +1,6 @@
 <template>
   <div>
-
-    <AdminTemplate  :page="page" :modulo="modulo">
+    <AdminTemplate :page="page" :modulo="modulo">
       <div slot="body">
         <div class="row justify-content-center">
           <div class="col-sm-8 col-12">
@@ -13,16 +12,9 @@
                 <CrudCreate :model="model" :apiUrl="apiUrl">
                   <div slot="body" class="row">
                     <div class="form-group col-12">
-              <label for="">Nombre</label>
-              <input
-                type="text"
-                name=""
-                v-model="model.nombre"
-                class="form-control"
-                id=""
-              />
-            </div>
-
+                      <label for="">Nombre</label>
+                      <input type="text" name="" v-model="model.nombre" class="form-control" id="" />
+                    </div>
                   </div>
                 </CrudCreate>
               </div>
@@ -47,9 +39,9 @@ export default {
       model: {
         nombre: "",
       },
-      apiUrl:'marcas',
-      page:'Configuracion',
-      modulo:'Marcas'
+      apiUrl: 'marcas',
+      page: 'Configuracion',
+      modulo: 'Marcas'
     };
   },
   methods: {

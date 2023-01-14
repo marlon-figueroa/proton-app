@@ -1,7 +1,6 @@
 <template>
   <div>
-
-    <AdminTemplate  :page="page" :modulo="modulo">
+    <AdminTemplate :page="page" :modulo="modulo">
       <div slot="body">
         <div class="row justify-content-center">
           <div class="col-sm-8 col-12">
@@ -13,26 +12,13 @@
                 <CrudCreate :model="model" :apiUrl="apiUrl">
                   <div slot="body" class="row">
                     <div class="form-group col-12">
-              <label for="">Nombre</label>
-              <input
-                type="text"
-                name=""
-                v-model="model.nombre"
-                class="form-control"
-                id=""
-              />
-            </div>
+                      <label for="">Nombre</label>
+                      <input type="text" name="" v-model="model.nombre" class="form-control" id="" />
+                    </div>
                     <div class="form-group col-12">
-              <label for="">Codigo</label>
-              <input
-                type="text"
-                name=""
-                v-model="model.codigo"
-                class="form-control"
-                id=""
-              />
-            </div>
-
+                      <label for="">Codigo</label>
+                      <input type="text" name="" v-model="model.codigo" class="form-control" id="" />
+                    </div>
                   </div>
                 </CrudCreate>
               </div>
@@ -43,24 +29,23 @@
     </AdminTemplate>
   </div>
 </template>
-
 <script>
 export default {
   name: "IndexPage",
   head() {
     return {
-      title:this.modulo,
+      title: this.modulo,
     };
   },
   data() {
     return {
       model: {
         nombre: "",
-        codigo:''
+        codigo: ''
       },
-      apiUrl:'medidas',
-      page:'Configuracion',
-      modulo:'Medidas'
+      apiUrl: 'medidas',
+      page: 'Configuracion',
+      modulo: 'Medidas'
     };
   },
   methods: {

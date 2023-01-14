@@ -17,24 +17,17 @@
                     <th class="py-0 px-1"></th>
                   </thead>
                   <tbody>
-                    <tr v-for="(m, i) in list">
+                    <tr v-for="(m, i) in list" :key="m.id">
                       <td class="py-0 px-1">{{ i + 1 }}</td>
                       <td class="py-0 px-1">{{ m.fecha }}</td>
                       <td class="py-0 px-1">{{ m.proveedor }}</td>
                       <td class="py-0 px-1">{{ m.total }}</td>
                       <td class="py-0 px-1">
                         <div class="btn-group">
-                          <nuxtLink
-                            :to="url_editar + m.id"
-                            class="btn btn-info btn-sm py-1 px-2"
-                          >
+                          <nuxtLink :to="url_editar + m.id" class="btn btn-info btn-sm py-1 px-2">
                             <i class="fas fa-eye"></i>
                           </nuxtLink>
-                          <button
-                            type="button"
-                            @click="Eliminar(m.id)"
-                            class="btn btn-danger btn-sm py-1 px-2"
-                          >
+                          <button type="button" @click="Eliminar(m.id)" class="btn btn-danger btn-sm py-1 px-2">
                             <i class="fas fa-trash"></i>
                           </button>
                         </div>
